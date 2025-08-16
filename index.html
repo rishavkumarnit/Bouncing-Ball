@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    .container {
+      height: 90vh;
+      width: 90vw;
+      background-color: red;
+      position: relative;
+    }
+    .ball {
+      height: 30px;
+      width: 30px;
+      background-color: green;
+      border-radius: 30px;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      animation: animationx 6s linear infinite,
+        animationy 1s ease-out infinite alternate;
+    }
+
+    @keyframes animationx {
+      0% {
+        left: 0;
+      }
+      100% {
+        left: 92%;
+      }
+    }
+    @keyframes animationy {
+      0% {
+        bottom: 0;
+      }
+      100% {
+        bottom: 40%;
+      }
+    }
+  </style>
+  <body>
+    <div class="container">
+      <div class="ball"></div>
+    </div>
+  </body>
+</html>
